@@ -102,9 +102,45 @@
     .sidebar{
         flex:1;
         border-right: 1px solid rgb(255, 102, 0, 0.90);
-        background-color: rgb(255, 102, 0, 0.90);
+        background-color: rgba(255, 102, 0, 0.1);
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            background-color: rgb(255, 102, 0, 0.90);
+            height: 50px;
+            padding: 10px;
+            justify-content: space-between;
+            color: black;
+    
+    
+            .logo{
+                color:black;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        
+            .user{
+        
+                display: flex;
+                gap: 10px;
+            }
+        
+            button{
+                background-color: black;
+                color: white;
+                padding: 10px;
+                border: none;
+                font-weight: bold;
+                cursor:pointer;
+                width: 20%x;
+                border-radius: 6px;
+        
+            }
+        }
         
     }
+
 
     .chat{
         flex:2;
