@@ -1,7 +1,6 @@
 .formContainer{
 
     background-color:rgba(204, 204, 204, 0.89);
-    //background-color:rgba(102, 205, 170, 0.89);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -80,5 +79,36 @@
         margin-top: 10px;
     }
 
-
 }
+
+.home{
+
+    background-color: rgba(204, 204, 204, 0.89);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .container{
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 70%;
+        height: 80%;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .sidebar{
+        flex:1;
+        border-right: 1px solid rgb(255, 102, 0, 0.90);
+        background-color: rgb(255, 102, 0, 0.90);
+        
+    }
+
+    .chat{
+        flex:2;
+        
+    }
+}
+
