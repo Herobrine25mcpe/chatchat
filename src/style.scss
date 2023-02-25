@@ -227,6 +227,23 @@
             cursor: pointer;
         }
     }
+
+    .messages{
+        background-color: rgba(204, 204, 204, 0.89);
+        padding: 10px;      
+        //height: calc(100% - 160px);
+        height:450px;
+    }
+
+    .input{
+        height: 50px;
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
     
         
     }
