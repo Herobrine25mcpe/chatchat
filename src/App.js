@@ -6,6 +6,7 @@ import "./style.scss"
 function App() {
   return (
     <Home/>
+    //<Register/>
   );
 }
 
