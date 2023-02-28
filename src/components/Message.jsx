@@ -9,6 +9,7 @@ const Message = () => {
       </div>
       <div className="messageContent">
         <p>hello</p>
+        <img src="https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
        
       </div>
     </div>
