@@ -276,6 +276,16 @@
                 background: rgba(204, 204, 204, 0.89);
             }
 
+            &.owner{
+                flex-direction: row-reverse;
+
+                p{
+                    background-color: white;
+                    border-radius: 10px 0px 10px 10px ;
+
+                }
+            }
+
         }
     }
 

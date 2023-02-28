@@ -4,7 +4,7 @@ const Login = () => {
     <div className="formContainer">
         <div className="formWraper">
 
-            <span className="logo">Logo</span>
+            <span className="logo">ChatChat</span>
             <span className="title">Login</span>
 
             <form action="">              
