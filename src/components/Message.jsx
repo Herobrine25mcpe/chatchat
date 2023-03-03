@@ -18,35 +18,42 @@ const Message = () => {
 
 export default Message */
 
-import { doc, onSnapshot } from "firebase/firestore";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
-import { db } from "../firebase";
-import Message from "./Message";
 
-const Messages = () => {
-  const [messages, setMessages] = useState([]);
+const Message = ({ message }) => {
+  const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
 
+  const ref = useRef();
+
   useEffect(() => {
-    const unSub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {
-      doc.exists() && setMessages(doc.data().messages);
-    });
-
-    return () => {
-      unSub();
-    };
-  }, [data.chatId]);
-
-  console.log(messages)
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  }, [message]);
 
   return (
-    <div className="messages">
-      {messages.map((m) => (
-        <Message message={m} key={m.id} />
-      ))}
+    <div
+      ref={ref}
+      className={`message ${message.senderId === currentUser.uid && "owner"}`}
+    >
+      <div className="messageInfo">
+        <img
+          src={
+            message.senderId === currentUser.uid
+              ? currentUser.photoURL
+              : data.user.photoURL
+          }
+          alt=""
+        />
+        <span>just now</span>
+      </div>
+      <div className="messageContent">
+        <p>{message.text}</p>
+        {message.img && <img src={message.img} alt="" />}
+      </div>
     </div>
   );
 };
 
-export default Messages;
+export default Message;
