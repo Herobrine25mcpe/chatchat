@@ -1,17 +1,13 @@
 
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCNPjFyhfX6Az8sUzgfJmjbEQ_-Swdsj9g",
-  authDomain: "chatchat-86d4f.firebaseapp.com",
-  projectId: "chatchat-86d4f",
-  storageBucket: "chatchat-86d4f.appspot.com",
-  messagingSenderId: "332347573682",
-  appId: "1:332347573682:web:c9c8b12ee544ed983790ab"
+  apiKey: "AIzaSyBgHrXPivUYy-_2roI5nkGKLTSucoiWlWo",
+  authDomain: "chatchat-b0f2b.firebaseapp.com",
+  projectId: "chatchat-b0f2b",
+  storageBucket: "chatchat-b0f2b.appspot.com",
+  messagingSenderId: "723266907166",
+  appId: "1:723266907166:web:c86b08907e6eaeaa02920f"
 };
 
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth()
+const app = initializeApp(firebaseConfig);
