@@ -1,4 +1,4 @@
-/*@mixin mobile{
+@mixin mobile{
     @media screen and (max-width:480px){
         @content;
     }
@@ -12,13 +12,14 @@
     @media screen and (max-width:1200px){
         @content;
     }
-}*/
+}
 
-$myorgane:(255, 102, 0, 0.90);
+$myorange:rgb(255, 102, 0, 0.90);
+$mygrey:rgb(0, 0, 0, 0.200);
 
 .formContainer{
 
-    background-color:rgba(204, 204, 204, 0.89);
+    background-color:$mygrey;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -36,7 +37,7 @@ $myorgane:(255, 102, 0, 0.90);
 
         .logo{
 
-            color: rgb(255, 102, 0, 0.90);
+            color: $myorange;
             font-weight: bold;
             font-size: 26px;
 
@@ -64,7 +65,7 @@ $myorgane:(255, 102, 0, 0.90);
         }
 
         button{
-            background-color: rgb(255, 102, 0, 0.90);
+            background-color: $myorange;
             color: white;
             padding: 10px;
             border: none;
@@ -102,7 +103,7 @@ $myorgane:(255, 102, 0, 0.90);
 
 .home{
 
-    background-color: rgba(204, 204, 204, 0.89);
+    background-color: $mygrey;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -116,21 +117,21 @@ $myorgane:(255, 102, 0, 0.90);
         height: 80%;
         display: flex;
         overflow: hidden;
-        /*@include tablet{
+        @include tablet{
         width: 90%;
-        } */
+        } 
     }
 
     .sidebar{
         flex:1;
-        border-right: 1px solid rgb(255, 102, 0, 0.90);
+        border-right: 1px solid $myorange;
         background-color: rgba(255, 102, 0, 0.1);
         position: relative;
 
         .navbar{
             display: flex;
             align-items: center;
-            background-color: rgb(255, 102, 0, 0.90);
+            background-color: $myorange;
             height: 50px;
             padding: 10px;
             justify-content: space-between;
@@ -141,9 +142,9 @@ $myorgane:(255, 102, 0, 0.90);
                 color:black;
                 font-weight: bold;
                 font-size: 20px;
-                /*@include tablet{
+                @include tablet{
                     display: none;
-                } */
+                } 
             }
         
             .user{
@@ -172,10 +173,10 @@ $myorgane:(255, 102, 0, 0.90);
                 width: 20%x;
                 border-radius: 6px;
                 align-items: center;
-               /* @include tablet{
+                @include tablet{
                     position: absolute;
                     bottom: 10px;
-                } */
+                } 
         
             }
 
@@ -228,7 +229,7 @@ $myorgane:(255, 102, 0, 0.90);
                 }
                 p{
                     font-size: 14px;
-                    color: darkgray
+                    color: darkgray;
                 }
             }
         }
@@ -259,7 +260,7 @@ $myorgane:(255, 102, 0, 0.90);
     }
 
     .messages{
-        background-color: rgba(204, 204, 204, 0.89);
+        background-color: rgb(255, 255, 255, 0.100);
         padding: 10px;      
         height: calc(100% - 160px);
         
@@ -292,7 +293,7 @@ $myorgane:(255, 102, 0, 0.90);
                 gap: 10px;
 
                 p{
-                    background-color: rgb(255, 102, 0, 0.90);
+                    background-color: rgb(255, 153, 84);
                     padding: 5px 20px;
                     border-radius: 0px 10px 10px 10px;
                     max-width: max-content;
@@ -304,7 +305,7 @@ $myorgane:(255, 102, 0, 0.90);
 
                 }
 
-                background: rgba(204, 204, 204, 0.89);
+                background: rgb(255, 255, 255, 0);
             }
 
             &.owner{
