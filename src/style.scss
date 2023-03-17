@@ -261,8 +261,8 @@ $myorgane:(255, 102, 0, 0.90);
     .messages{
         background-color: rgba(204, 204, 204, 0.89);
         padding: 10px;      
-        //height: calc(100% - 160px);
-        height:450px;
+        height: calc(100% - 160px);
+        
         overflow: scroll;
 
 
